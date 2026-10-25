@@ -72,15 +72,16 @@ body {
     border-radius:10px;
     width:53px;
     height: 33px;
-    box-shadow:0 0 10px green
+    box-shadow:0 0 10px green;
 }
 .Calb:hover, .rpsb:hover{
     transform: scale(1.2);
     box-shadow:0 0 15px blue;
+    cursor: pointer;
 }
 footer {
     color: #32ff7e;
-    font-size: 28px ;
+    font-size: 27px ;
     text-align: left;
     text-shadow:2px 2px 6px rgb(0, 20, 75);
     font-family: Arial, Helvetica, sans-serif;
