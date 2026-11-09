@@ -25,6 +25,11 @@ function changlang(){
     let soonh = document.querySelector("#soonh");
     let soonp = document.querySelector("#soonp");
     let soonb = document.querySelector("#soonb");
+    //lets of Dev
+    let tavfa = document.querySelector("#tavfa");
+    let namefa = document.querySelector("#namefa");
+    let taven = document.querySelector("#taven");
+    let nameen = document.querySelector("#nameen");
     //Change Language
     if (Lang.value === "English"){
         //English Calculator
@@ -51,6 +56,11 @@ function changlang(){
         soonh.innerHTML = "Soon";
         soonp.innerHTML = "Soon";
         soonb.innerHTML = "Soon";
+        //English Dev
+        taven.innerHTML = "Development By";
+        nameen.innerHTML = "Ali Asgharian" + "❤️";
+        document.querySelector(".deven").style.display = "flex"
+        document.querySelector(".devfa").style.display = "none"
     }else {
         //Persian Calculator
         calch.innerHTML = "ماشین حساب  ";
@@ -64,18 +74,23 @@ function changlang(){
         timeh.innerHTML = "زمان";
         timep.innerHTML = "پیام بسته بر زمان";
         timeb.innerHTML = "لینک";
-        //Persion Even Number 
+        //Persian Even Number 
         evenh.innerHTML = "عدد زوج";
         evenp.innerHTML = "دستگاه تشخیص عدد زوج";
         evenb.innerHTML = "لینک";
-        //Persion Weekly Schedule
+        //Persian Weekly Schedule
         weekh.innerHTML = "برنامه هفتگی";
         weekp.innerHTML = "برنامه هفتگی مدرسه من";
         weekb.innerHTML = "لینک";
-        //Persion Coming Soon
+        //Persian Coming Soon
         soonh.innerHTML = "به زودی";
         soonp.innerHTML = "به زودی";
         soonb.innerHTML = "به زودی";
+        //Persian Dev 
+        tavfa.innerHTML = "ساخته شده توسط";
+        namefa.innerHTML =  "❤️" + " علی اصغریان";
+        document.querySelector(".devfa").style.display = "flex";
+        document.querySelector(".deven").style.display = "none";
     }
 }
 changlang()
