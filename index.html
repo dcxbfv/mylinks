@@ -1,23 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🔳 MyLinks</title>
+    <title>My links</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="Cal" >
-        <h2 class="Calh"> ماشین حساب 🧮</h2>
-        <p class="Calp">NeonCalculator</p>
-        <a href="https://dcxbfv.github.io/myneoncalculator"><button class="Calb"> Link </button></a>
+    <div class="conts">
+        <select name="Language" id="Lang">
+            <option value="فارسی" class="lang1">فارسی</option>
+            <option value="English" class="lang2">English</option>
+        </select>
     </div>
-    <div class="rps">
-        <h2 class="pers">سنگ ، کاغذ ، قیچی</h2>
-        <p class="eng">Rock , Paper , Scissors</p>
-        <p class="sticker">✂️ 📄 🪨</p>
-        <a href="https://dcxbfv.github.io/neonarena"><button class="rpsb"> Link </button></a>
+    <div class="container">
+        <div class="calc">
+            <h2 id="calch"></h2>
+            <p id="calcp"></p>
+            <p class="sticker">➕ ✖️ ➗</p>
+            <a href="https://dcxbfv.github.io/myneoncalculator"><button id="calcb"></button></a>
+        </div>
+        <div class="rps">
+            <h2 id="rpsh"></h2>
+            <p id="rpsp"></p>
+            <p class="sticker">🪨 📄 ✂️</p>
+            <a href="https://dcxbfv.github.io/neonarena"><button id="rpsb"></button></a>
+        </div>
+        <div class="time">
+            <h2 id="timeh"></h2>
+            <p id="timep"></p>
+            <p class="sticker">⏰ 🕗 ⌚</p>
+            <a href="https://dcxbfv.github.io/time"><button id="timeb"></button></a>
+        </div>
+        <div class="even">
+            <h2 id="evenh"></h2>
+            <p id="evenp"></p>
+            <p class="sticker">2️ 🤖 🖥️</p>
+            <a href="https://dcxbfv.github.io/Even"><button id="evenb"></button></a>
+        </div>
+        <div class="week">
+            <h2 id="weekh"></h2>
+            <p id="weekp"></p>
+            <p class="sticker">🏫 📚 😃</p>
+            <a href="https://dcxbfv.github.io/Weakly"><button id="weekb"></button></a>
+        </div>
+        <div class="soon">
+            <h2 id="soonh"></h2>
+            <p id="soonp"></p>
+            <p class="sticker">❓ ❔</p>
+            <a href=""><button id="soonb"></button></a>
+        </div>
     </div>
-    <footer>ساخته شده توسط علی اصغریان ❤️</footer>
-    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </body>
 </html>
