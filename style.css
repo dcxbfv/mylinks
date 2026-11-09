@@ -1,88 +1,169 @@
-*{
-    direction: rtl;
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700;800&display=swap');
+
+* {
+    box-sizing: border-box;
 }
+
 body {
-    background-color: #3E3E3E;
+    margin: 0;
+    padding: 30px;
+    background: linear-gradient(135deg, #667eea, #764ba2 , plum);
+    font-family: 'Vazirmatn' , sans-serif ;
+}
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 1100px;
+    margin: 50px auto;
+}
+.container > div {
+    background-color: #1c1c1c;
+    color: white;
+    padding: 25px;
+    border-radius: 25px;
+    box-shadow: 0px 0px 10px red;
+    text-align: center;
+    min-height: 220px;
 }
 
-.Cal {
-    text-align: center;
-    background-color: black;
-    padding: 10px;
-    margin: 20px auto;
-    width:350px;
-    height: 215px;
-    border-radius: 50px;
-    box-shadow:0 0 12px #0f0
-}
-.Calh {
-    color: #0f0;
-    text-shadow:1px 1px 2px white;
-    font-size: 40px;
-    text-align: center;
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
-.Calp {
-    color: yellowgreen;
-    font-size: 22px;
-    text-align: center;
-    font-family :sans-serif;
+@media (max-width: 500px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
 }
 
-.Calb {
+#calch , #calcp {
+    color: white;
+    text-shadow: 0px 0px 50px green,
+                 0px 0px 10px green,
+                 0px 0px 20px green;
+}
+#rpsh , #rpsp{
+    color: white;
+    text-shadow: 0px 0px 50px red,
+                 0px 0px 10px red,
+                 0px 0px 20px red;
+}
+#timeh , #timep {
+    color: white;
+    text-shadow: 0px 0px 50px gold,
+                 0px 0px 10px gold,
+                 0px 0px 20px gold;
+}
+#evenh , #evenp {
+    color: white;
+    text-shadow: 0px 0px 50px pink,
+                 0px 0px 10px pink,
+                 0px 0px 20px pink;
+}
+#weekh , #weekp {
+    color: white;
+    text-shadow: 0px 0px 50px aqua,
+                 0px 0px 10px aqua,
+                 0px 0px 20px aqua;
+}
+#soonh , #soonp {
+    color: white;
+    text-shadow: 0px 0px 50px springgreen,
+                 0px 0px 10px springgreen,
+                 0px 0px 20px springgreen;
+}
+/* stickers */
+
+.sticker {
+    font-size:1.25rem;
+}
+.rps > .sticker {
+    text-shadow: 0px 0px 10px red,
+                 0px 0px 15px red;
+}
+.calc > .sticker {
+    text-shadow: 0px 0px 10px green,
+                 0px 0px 15px green;
+}
+.time > .sticker {
+    text-shadow: 0px 0px 10px gold,
+                 0px 0px 15px gold;
+}
+.even > .sticker {
+    text-shadow: 0px 0px 10px pink,
+                 0px 0px 15px pink;
+}
+.week > .sticker {
+    text-shadow: 0px 0px 10px aqua,
+                 0px 0px 15px aqua;
+}
+.soon > .sticker {
+    text-shadow: 0px 0px 10px springgreen,
+                 0px 0px 15px springgreen;
+}
+/* Link Buttons */
+button {
+    box-sizing: border-box;
+    color: white;
+    border-radius: 20px;
+    padding: 7.5px;
+}
+button:hover {
+    border: 3px solid wheat;
+    border-top-color :crimson;
+    border-bottom-color:crimson;
+    color:white;
+    transform: scale(1.1);
+}
+/* Shadow Link Buttons  */
+#calcb {
+    box-shadow: 0px 0px 10px green,
+                0px 0px 20px green;
+    background: linear-gradient(135deg , green , black);
+}
+#rpsb {
+    box-shadow: 0px 0px 10px red,
+                0px 0px 20px red;
+    background: linear-gradient(135deg , red , black);
+}
+#timeb {
+    box-shadow: 0px 0px 10px gold,
+                0px 0px 20px gold;
+    background: linear-gradient(135deg , gold , black);
+}
+#evenb {
+    box-shadow: 0px 0px 10px pink,
+                0px 0px 20px pink;
+    background: linear-gradient(135deg , pink , black);
+
+}
+#weekb {
+    box-shadow: 0px 0px 10px aqua,
+                0px 0px 20px aqua;
+    background: linear-gradient(135deg , aqua , black);
+}
+#soonb {
+    box-shadow: 0px 0px 10px springgreen,
+                0px 0px 20px springgreen;
+    background: linear-gradient(135deg , springgreen , black);
+}
+select {
+    background: linear-gradient(135deg , #000428, #004e92);
+    color: whitesmoke;
+    border-radius: 20px;
+    padding: 7.5px;
+    font-size: 1rem;
     text-align: center;
-    background-color: orange;
-    color: black;
-    border-radius:10px;
-    width:53px;
-    height: 33px;
-    box-shadow:0 0 10px green
+    width: 150px;
+    height: 75px;
 }
-.rps{
-    direction: ltr;
-    text-align: center;
-    background-color: #000;
-    padding: 10px;
-    padding-bottom: 20px;
-    margin: 35px auto;
-    width:350px;
-    height: 215px;
-    border-radius: 50px;
-    box-shadow:0 0 12px #0f0;
+option {
+    background:linear-gradient(135deg , #0f0c29, #302b63, #24243e) !important;
 }
-.pers{
-    color: #f00;
-    text-shadow:0 0 2px white;
-    font-size:30px;
-    text-align: center;
-}
-.eng{
-    color: orangered;
-    text-shadow: 0 0 2px white;
-    font-family: sans-serif ;
-    font-size: 20px;
-}
-.sticker{
-    font-size: 20px;
-}
-.rpsb{
-    text-align: center;
-    background-color: orange;
-    color: black;
-    border-radius:10px;
-    width:53px;
-    height: 33px;
-    box-shadow:0 0 10px green;
-}
-.Calb:hover, .rpsb:hover{
-    transform: scale(1.2);
-    box-shadow:0 0 15px blue;
-    cursor: pointer;
-}
-footer {
-    color: #32ff7e;
-    font-size: 27px ;
-    text-align: left;
-    text-shadow:2px 2px 6px rgb(0, 20, 75);
-    font-family: Arial, Helvetica, sans-serif;
+.conts {
+    text-align:center
 }
