@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700;800&display=swap');
 
+@property --angle {
+    syntax: "<angle>";
+    inherits: false;
+    initial-value: 0deg;
+}
 * {
     box-sizing: border-box;
 }
@@ -7,7 +12,27 @@
 body {
     margin: 0;
     padding: 30px;
-    background: linear-gradient(135deg, #004e92, #302b63, #0f0c29 );
+    background:radial-gradient(
+        circle at 15% 75%,
+        #001F3F,
+        transparent 24%
+    ),
+    radial-gradient(
+        circle at 90% 35%,
+        #0066CC,
+        transparent 25%
+    ),
+    radial-gradient(
+        circle at 70% 100%,
+        #5B3A9E,
+        transparent 27%
+    ),
+    radial-gradient(
+        circle at 7.5% 10%,
+        #8E7CFF,
+        transparent 28%
+    ),
+    linear-gradient(135deg, #004e92, #302b63, #0f0c29);
     font-family: 'Vazirmatn' , sans-serif ;
 }
 .container {
@@ -18,16 +43,29 @@ body {
     margin: 50px auto;
 }
 .container > div {
-    background-color: #1c1c1c;
+    background: linear-gradient(#1c1c1c, #1c1c1c) padding-box, 
+    conic-gradient(
+            from var(--angle),
+            red,
+            orange,
+            yellow,
+            red
+        ) border-box;
     color: white;
     padding: 25px;
     border-radius: 25px;
-    box-shadow: 0px 0px 10px red;
+    border:4px solid transparent;
     text-align: center;
     min-height: 220px;
+    animation: spin 3.25s linear infinite;
 }
-.container > div:hover {
-    transform: scale(1.01);
+@keyframes spin {
+    to {
+        --angle:360deg
+    }
+}
+.container > div:hover{
+    transform: scale(1.03);
 }
 
 /* Responsive */
@@ -112,58 +150,113 @@ body {
 button {
     box-sizing: border-box;
     color: white;
+    border: 4px solid transparent;
     border-radius: 20px;
     padding: 7.5px;
+    animation:spin 2s ease infinite;
     transition: transform 0.5s ease;
 }
+@keyframes spin {
+    to {
+        --angle:360deg
+    }
+}
 button:hover {
-    border: 3px solid wheat;
-    border-top-color :crimson;
-    border-bottom-color:crimson;
     color:white;
-    transform: scale3d(1.1, 1.1, 1);
+    transform: scale3d(1.2, 1.2, 1);
 }
 /* Shadow Link Buttons  */
 #calcb {
     box-shadow: 0px 0px 10px green,
                 0px 0px 20px green;
-    background: linear-gradient(135deg , green , black);
+    background: linear-gradient(135deg , green , black) padding-box,
+    conic-gradient(
+            from var(--angle),
+            lime,
+            #333,
+            lime
+            
+        ) border-box;
+    ;
 }
 #rpsb {
     box-shadow: 0px 0px 10px red,
                 0px 0px 20px red;
-    background: linear-gradient(135deg , red , black);
+    background: linear-gradient(135deg , red , black) padding-box,
+    conic-gradient(
+            from var(--angle),
+            orangered,
+            #333,
+            orangered
+        ) border-box;
 }
 #timeb {
     box-shadow: 0px 0px 10px gold,
                 0px 0px 20px gold;
-    background: linear-gradient(135deg , gold , black);
+    background: linear-gradient(135deg , gold , black) padding-box,
+    conic-gradient(
+            from var(--angle),
+            yellow,
+            #333,
+            yellow
+        ) border-box;
 }
 #evenb {
     box-shadow: 0px 0px 10px pink,
                 0px 0px 20px pink;
-    background: linear-gradient(135deg , pink , black);
+    background: linear-gradient(135deg , pink , black) padding-box,
+    conic-gradient(
+            from var(--angle),
+            orchid,
+            #333,
+            orchid
+        ) border-box;
 
 }
 #weekb {
     box-shadow: 0px 0px 10px aqua,
                 0px 0px 20px aqua;
-    background: linear-gradient(135deg , aqua , black);
+    background: linear-gradient(135deg , aqua , black) padding-box,
+    conic-gradient(
+            from var(--angle),
+            turquoise,
+            #333,
+            turquoise
+        ) border-box;
 }
 #soonb {
     box-shadow: 0px 0px 10px springgreen,
                 0px 0px 20px springgreen;
-    background: linear-gradient(135deg , springgreen , black);
+    background: linear-gradient(135deg , springgreen , black) padding-box ,
+    conic-gradient(
+            from var(--angle),
+            limegreen,
+            #333,
+            limegreen
+        ) border-box;
 }
 select {
-    background: linear-gradient(135deg , #000428, #004e92);
+    background: linear-gradient(135deg , #000428, #004e92) padding-box , 
+    conic-gradient(
+            from var(--angle),
+            #007e62,
+            blue,
+            #007e62
+        ) border-box;
     color: whitesmoke;
     border-radius: 20px;
+    border:4px solid transparent;
     padding: 7.5px;
     font-size: 1rem;
     text-align: center;
     width: 150px;
     height: 75px;
+    animation:spin 2s linear infinite;
+}
+@keyframes spin {
+    to {
+        --angle: 360deg;
+    }
 }
 option {
     background:linear-gradient(135deg , #0f0c29, #302b63, #24243e) !important;
